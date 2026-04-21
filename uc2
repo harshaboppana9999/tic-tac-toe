@@ -1,0 +1,49 @@
+import java.util.Random;
+
+public class TicTacToeToss {
+
+    public static void main(String[] args) {
+
+        // Step 1: Create Random object
+        Random random = new Random();
+
+        // Step 2: Generate random number (0 or 1)
+        int toss = random.nextInt(2);
+
+        // Step 3: Declare variables for players
+        String player1 = "Player 1";
+        String player2 = "Player 2";
+
+        char player1Symbol, player2Symbol;
+        String currentPlayer;
+        char currentSymbol;
+
+        // Step 4: Apply conditional logic
+        if (toss == 0) {
+            player1Symbol = 'X';
+            player2Symbol = 'O';
+            currentPlayer = player1;
+            currentSymbol = player1Symbol;
+        } else {
+            player1Symbol = 'O';
+            player2Symbol = 'X';
+            currentPlayer = player2;
+            currentSymbol = player2Symbol;
+        }
+
+        // Step 5: Display results
+        System.out.println("=== Toss Result ===");
+
+        if (toss == 0) {
+            System.out.println(player1 + " starts first!");
+        } else {
+            System.out.println(player2 + " starts first!");
+        }
+
+        System.out.println(player1 + " symbol: " + player1Symbol);
+        System.out.println(player2 + " symbol: " + player2Symbol);
+
+        System.out.println("Current Player: " + currentPlayer);
+        System.out.println("Current Symbol: " + currentSymbol);
+    }
+}
